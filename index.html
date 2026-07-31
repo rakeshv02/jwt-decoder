@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>JWT Decoder — Free Online JSON Web Token Decoder | Tabutility</title>
+<meta name="description" content="Instantly decode and inspect any JWT token. See the header, payload, and expiry in a clear format. Free, works entirely in your browser — no data sent to servers."/>
+<link rel="canonical" href="https://jwt-decoder.tabutility.com/"/>
+<meta property="og:title" content="JWT Decoder — Free Online JSON Web Token Decoder"/>
+<meta property="og:description" content="Decode any JWT token instantly. See header, payload, and expiry. 100% client-side — no data sent anywhere."/>
+<meta property="og:url" content="https://jwt-decoder.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"JWT Decoder","url":"https://jwt-decoder.tabutility.com/","description":"Free online JWT decoder. Paste any JSON Web Token to inspect its header, payload, and expiry instantly.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"JWT Decoder","item":"https://jwt-decoder.tabutility.com/"}]}</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #334155}
+nav a{color:#a5b4fc;text-decoration:none;font-size:14px;font-weight:600}
+.container{max-width:800px;margin:0 auto;padding:24px 16px}
+h1{font-size:clamp(20px,4vw,30px);font-weight:800;margin-bottom:8px}
+.subtitle{color:#94a3b8;font-size:15px;margin-bottom:24px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:22px;margin-bottom:18px}
+.card h2{font-size:15px;font-weight:700;margin-bottom:14px}
+textarea{width:100%;background:#0f172a;border:1px solid #475569;border-radius:8px;padding:12px;color:#f8fafc;font-family:'Courier New',monospace;font-size:13px;resize:vertical;min-height:100px;outline:none;line-height:1.5}
+textarea:focus{border-color:#6366f1}
+.btn{background:#6366f1;color:#fff;border:none;border-radius:8px;padding:10px 22px;font-size:14px;font-weight:700;cursor:pointer;margin-top:10px}
+.btn:hover{background:#4f46e5}
+.btn-clear{background:#334155;color:#94a3b8;border:none;border-radius:8px;padding:10px 16px;font-size:14px;cursor:pointer;margin-left:8px}
+.section{margin-bottom:16px}
+.section-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.section-pill{font-size:11px;font-weight:700;border-radius:20px;padding:3px 10px;text-transform:uppercase;letter-spacing:.05em}
+.pill-header{background:#3b0764;color:#c084fc}
+.pill-payload{background:#064e3b;color:#34d399}
+.pill-sig{background:#422006;color:#fb923c}
+pre{background:#0f172a;border:1px solid #334155;border-radius:8px;padding:14px;font-family:'Courier New',monospace;font-size:13px;white-space:pre-wrap;word-break:break-all;line-height:1.6;color:#e2e8f0}
+.meta-row{display:flex;justify-content:space-between;padding:8px 12px;background:#0f172a;border-radius:8px;margin-bottom:6px;font-size:13px}
+.meta-row .key{color:#94a3b8}
+.meta-row .val{color:#f1f5f9;font-weight:600}
+.meta-row .val.expired{color:#f87171}
+.meta-row .val.valid{color:#34d399}
+.error{background:#2d1a1a;border:1px solid #7f1d1d;border-radius:8px;padding:14px;color:#fca5a5;font-size:13px}
+.adslot{min-height:90px;background:#1e293b;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#475569;font-size:12px;margin:20px 0}
+.faq-item{border-bottom:1px solid #334155;padding:14px 0}
+.faq-item summary{cursor:pointer;font-weight:600;color:#e2e8f0;list-style:none;font-size:14px}
+.faq-item p{color:#94a3b8;font-size:13px;margin-top:8px;line-height:1.6}
+footer{text-align:center;padding:32px 16px;color:#475569;font-size:12px;border-top:1px solid #1e293b;margin-top:32px}
+.privacy-note{display:flex;align-items:center;gap:8px;background:#0f2027;border:1px solid #0e4d3a;border-radius:8px;padding:10px 14px;margin-top:10px;font-size:12px;color:#34d399}
+</style>
+</head>
+<body>
+<nav>
+  <a href="https://tabutility.com">← All Tools</a>
+  <span style="color:#64748b;font-size:12px">Free · No sign-up</span>
+</nav>
+<div class="container">
+  <h1>🔑 JWT Decoder</h1>
+  <p class="subtitle">Paste any JSON Web Token to instantly decode the header, payload, claims, and expiry.</p>
+
+  <div class="adslot"><ins class="adsbygoogle" style="display:block;width:100%;height:90px" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="horizontal"></ins></div>
+
+  <div class="card">
+    <h2>Paste your JWT</h2>
+    <textarea id="jwt-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c" rows="4"></textarea>
+    <div class="privacy-note">🔒 100% client-side — your token never leaves your browser.</div>
+    <div style="margin-top:10px">
+      <button class="btn" onclick="decode()">Decode JWT</button>
+      <button class="btn-clear" onclick="clear_all()">Clear</button>
+    </div>
+  </div>
+
+  <div id="output" style="display:none">
+    <div class="card">
+      <h2>Token Metadata</h2>
+      <div id="meta"></div>
+    </div>
+    <div class="card">
+      <div class="section-header"><span class="section-pill pill-header">Header</span></div>
+      <pre id="header-out"></pre>
+    </div>
+    <div class="card">
+      <div class="section-header"><span class="section-pill pill-payload">Payload</span></div>
+      <pre id="payload-out"></pre>
+    </div>
+  </div>
+  <div id="error-out" style="display:none"></div>
+
+  <!-- Amazon -->
+  <div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=programming+coding+books&tag=tabutility-20','_blank','noopener noreferrer')">
+    <span style="font-size:28px;flex-shrink:0">📚</span>
+    <div>
+      <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Level up your dev skills</div>
+      <div style="font-size:12px;color:#94a3b8">Browse programming books <span style="color:#f59e0b">→ Browse on Amazon</span></div>
+      <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
+    </div>
+  </div>
+
+  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:32px">
+    <a href="https://json-formatter.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">JSON Formatter</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    <a href="https://base64-encoder.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Base64 Encoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    <a href="https://url-encoder.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">URL Encoder</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+    <a href="https://regex-tester.tabutility.com/" style="display:block;background:#1e293b;border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none"><div style="font-size:13px;font-weight:600;color:#f1f5f9">Regex Tester</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Developer Tools</div></a>
+  </div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <details class="faq-item"><summary>Is it safe to paste my JWT here?</summary><p>Yes — this tool runs 100% in your browser. Your token is never sent to any server. You can verify this by going offline before pasting. That said, avoid pasting production tokens with sensitive claims into any online tool as a general security practice.</p></details>
+    <details class="faq-item"><summary>What is a JWT?</summary><p>A JSON Web Token (JWT) is a compact, URL-safe way to represent claims between two parties. It consists of three Base64URL-encoded parts: Header (algorithm & type), Payload (claims), and Signature. JWTs are commonly used for authentication and API authorization.</p></details>
+    <details class="faq-item"><summary>Can this tool verify the JWT signature?</summary><p>No — verifying a signature requires the secret key or public key used to sign the token. This tool only decodes the publicly readable parts (header and payload). Signature verification must be done server-side where the secret is held.</p></details>
+    <details class="faq-item"><summary>What does "exp" mean in a JWT?</summary><p>The "exp" claim (Expiration Time) is a Unix timestamp representing when the token expires. This decoder shows it in human-readable form and tells you whether the token is currently valid or has expired.</p></details>
+    <details class="faq-item"><summary>What algorithms are used in JWTs?</summary><p>Common algorithms include HS256 (HMAC-SHA256, symmetric), RS256 (RSA-SHA256, asymmetric), and ES256 (ECDSA, asymmetric). The algorithm is shown in the "alg" field of the header.</p></details>
+  </div>
+</div>
+<footer>© 2024 Tabutility · 100% client-side · <a href="https://tabutility.com" style="color:#6366f1">All Tools</a></footer>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it safe to paste my JWT here?","acceptedAnswer":{"@type":"Answer","text":"Yes — this tool runs 100% in your browser. Your token is never sent to any server."}},{"@type":"Question","name":"What is a JWT?","acceptedAnswer":{"@type":"Answer","text":"A JSON Web Token is a compact, URL-safe way to represent claims. It consists of Header, Payload, and Signature parts."}},{"@type":"Question","name":"Can this tool verify the JWT signature?","acceptedAnswer":{"@type":"Answer","text":"No — verifying a signature requires the secret key. This tool only decodes the publicly readable header and payload."}},{"@type":"Question","name":"What does 'exp' mean in a JWT?","acceptedAnswer":{"@type":"Answer","text":"The 'exp' claim is a Unix timestamp for when the token expires. This decoder shows it in human-readable form."}},{"@type":"Question","name":"What algorithms are used in JWTs?","acceptedAnswer":{"@type":"Answer","text":"Common algorithms: HS256 (HMAC-SHA256), RS256 (RSA-SHA256), ES256 (ECDSA). Shown in the 'alg' header field."}}]}</script>
+<script>
+function b64decode(str){try{return JSON.parse(atob(str.replace(/-/g,'+').replace(/_/g,'/')));}catch{return null;}}
+function decode(){
+  const raw=document.getElementById('jwt-input').value.trim();
+  const parts=raw.split('.');
+  document.getElementById('error-out').style.display='none';
+  document.getElementById('output').style.display='none';
+  if(parts.length!==3){showError('Not a valid JWT — expected 3 dot-separated parts.');return;}
+  const header=b64decode(parts[0]);
+  const payload=b64decode(parts[1]);
+  if(!header||!payload){showError('Could not decode token. Make sure you copied the full JWT.');return;}
+  document.getElementById('header-out').textContent=JSON.stringify(header,null,2);
+  document.getElementById('payload-out').textContent=JSON.stringify(payload,null,2);
+  let meta='';
+  if(payload.iat) meta+=row('Issued At',new Date(payload.iat*1000).toLocaleString());
+  if(payload.exp){
+    const exp=new Date(payload.exp*1000);
+    const expired=Date.now()>payload.exp*1000;
+    meta+=`<div class="meta-row"><span class="key">Expires At</span><span class="val ${expired?'expired':'valid'}">${exp.toLocaleString()} ${expired?'(EXPIRED)':'(valid)'}</span></div>`;
+  }
+  if(payload.sub) meta+=row('Subject',payload.sub);
+  if(payload.iss) meta+=row('Issuer',payload.iss);
+  if(payload.aud) meta+=row('Audience',Array.isArray(payload.aud)?payload.aud.join(', '):payload.aud);
+  meta+=row('Algorithm',header.alg||'—');
+  document.getElementById('meta').innerHTML=meta||'<p style="color:#64748b;font-size:13px">No standard claims found.</p>';
+  document.getElementById('output').style.display='block';
+}
+function row(k,v){return `<div class="meta-row"><span class="key">${k}</span><span class="val">${v}</span></div>`;}
+function showError(msg){const el=document.getElementById('error-out');el.innerHTML='<div class="error">⚠️ '+msg+'</div>';el.style.display='block';}
+function clear_all(){document.getElementById('jwt-input').value='';document.getElementById('output').style.display='none';document.getElementById('error-out').style.display='none';}
+document.getElementById('jwt-input').addEventListener('input',()=>{if(document.getElementById('jwt-input').value.trim())decode();});
+</script>
+</body>
+</html>
