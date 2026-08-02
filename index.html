@@ -154,5 +154,32 @@ function showError(msg){const el=document.getElementById('error-out');el.innerHT
 function clear_all(){document.getElementById('jwt-input').value='';document.getElementById('output').style.display='none';document.getElementById('error-out').style.display='none';}
 document.getElementById('jwt-input').addEventListener('input',()=>{if(document.getElementById('jwt-input').value.trim())decode();});
 </script>
+<section id="seo-content">
+  <style>
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#334155;line-height:1.7}
+    #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
+    #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
+    #seo-content p,#seo-content li{font-size:.95rem}
+    #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
+    @media (prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+  </style>
+  <p>This JWT decoder reads the header and payload of a JSON Web Token and displays their contents in clean, human-readable JSON — entirely in your browser. It helps developers debug authentication flows, inspect claims like <code>exp</code> and <code>iss</code>, and confirm exactly what data an API is receiving without wiring up extra logging.</p>
+  <h2>How the JWT Decoder Works</h2>
+  <p>A JWT is three Base64URL-encoded sections separated by dots: the header, the payload, and the signature. The decoder splits the token on the dots, Base64URL-decodes the first two sections, and parses them as JSON so you can read the algorithm, token type, and every claim without a server round trip.</p>
+  <p>It does not verify the signature, because that requires the secret or public key held by the issuer. Instead it focuses on decoding — showing you the exact claims and converting time-based fields such as <code>iat</code> (issued at) and <code>exp</code> (expiry) from Unix timestamps into readable dates. Because the header and payload are only encoded, not encrypted, anyone can read them; this tool simply makes that built-in transparency convenient while keeping your token on your own machine.</p>
+  <div class="example"><strong>Example 1:</strong> Pasting a token whose payload is <code>{"sub":"1234","name":"Ada","iat":1710000000}</code> reveals the subject, name, and issued-at time at a glance.</div>
+  <div class="example"><strong>Example 2:</strong> An <code>exp</code> value of <code>1735689600</code> is shown as <strong>01 Jan 2025 00:00:00 UTC</strong>, making it obvious whether a token has already expired.</div>
+  <h2>Frequently Asked Questions</h2>
+  <h3>Is it safe to paste my JWT here?</h3>
+  <p>Yes — this tool runs 100% in your browser. Your token is never sent to any server.</p>
+  <h3>What is a JWT?</h3>
+  <p>A JSON Web Token is a compact, URL-safe way to represent claims. It consists of Header, Payload, and Signature parts.</p>
+  <h3>Can this tool verify the JWT signature?</h3>
+  <p>No — verifying a signature requires the secret key. This tool only decodes the publicly readable header and payload.</p>
+  <h3>What does 'exp' mean in a JWT?</h3>
+  <p>The 'exp' claim is a Unix timestamp for when the token expires. This decoder shows it in human-readable form.</p>
+  <h3>What algorithms are used in JWTs?</h3>
+  <p>Common algorithms: HS256 (HMAC-SHA256), RS256 (RSA-SHA256), ES256 (ECDSA). Shown in the 'alg' header field.</p>
+</section>
 </body>
 </html>
